@@ -50,6 +50,7 @@ main {
 
 main h1 {
     font-size: 60px;
+    letter-spacing: 10px;
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -151,4 +152,60 @@ footer {
     font-size: 24px;
     cursor: pointer;
     color: white;
+}
+
+.subscribe-btn {
+    background-color: #C8102E; /* Liverpool Red */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subscribe-btn:hover {
+    background-color: #A10D23; /* Darker Red on Hover */
+}
+
+#subscribePopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.popup-content form button {
+    background-color: #C8102E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.popup-content form button:hover {
+    background-color: #A10D23;
 }

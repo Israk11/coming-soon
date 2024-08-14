@@ -52,7 +52,21 @@
                 <p>Seconds</p>
             </div>
         </div>
+         <!-- Subscribe Button -->
+    <button id="subscribeBtn" class="subscribe-btn">Subscribe</button>
     </main>
+    <!-- Subscribe Popup Form -->
+<div id="subscribePopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscribeForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <button type="submit" class="subscribe-btn">Submit</button>
+        </form>
+    </div>
+</div>
     <footer>
         <p>&copy; 2024 Your Company. All rights reserved.</p>
         <div class="social-media">

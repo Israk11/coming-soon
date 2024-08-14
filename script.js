@@ -55,3 +55,58 @@ function openPopup(contentType) {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+
+// Open the subscribe popup
+document.getElementById("subscribeBtn").onclick = function() {
+    document.getElementById("subscribePopup").style.display = "flex";
+}
+
+// Close the popup
+function closePopup() {
+    document.getElementById("subscribePopup").style.display = "none";
+}
+
+// Handle form submission
+document.getElementById("subscribeForm").onsubmit = function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    // Example of saving data to a free database like Firebase
+    saveToFirebase(name, email);
+
+    // You can replace this with another service or GitHub API if needed
+
+    // Close the popup after submission
+    closePopup();
+    alert("Thank you for subscribing!");
+};
+
+// Example: Save data to Firebase (replace with your Firebase configuration)
+function saveToFirebase(name, email) {
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+
+    const database = firebase.database();
+    const subscribersRef = database.ref('subscribers');
+
+    subscribersRef.push({
+        name: name,
+        email: email,
+        timestamp: new Date().toISOString()
+    });
+}
