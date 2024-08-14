@@ -52,9 +52,6 @@ function openPopup(contentType) {
     document.getElementById("popup").style.display = "flex";
 }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
 
 
 // Open the subscribe popup
@@ -65,6 +62,7 @@ document.getElementById("subscribeBtn").onclick = function() {
 // Close the popup
 function closePopup() {
     document.getElementById("subscribePopup").style.display = "none";
+    document.getElementById("popup").style.display = "none";
 }
 
 // Handle form submission
