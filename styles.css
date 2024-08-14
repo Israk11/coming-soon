@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.logo {
+    height: 50px;
+}
+
+nav a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 160px);
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+main h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.time{
+    display: flex;
+    direction: row;
+}
+.digit-box {
+    background-color: #1A73E8; /* Manchester Blue */
+    color: white;
+    padding: 20px;
+    margin: 2px;
+    border-radius: 8px;
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.time-section p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.colon {
+    color: white;
+    font-size: 40px;
+    padding: 0 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    padding: 20px 40px;
+    color: white;
+}
+
+.social-media img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.popup-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
